@@ -1,0 +1,45 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+.DS_Store
+
+# Ignore all database files in the data directory
+# This includes:
+# - *.db: All database files
+# - *.mv.db: H2 database files
+# - *.lock.db: Lock files for databases
+# - *.trace.db: Trace files for databases
+data/*.db
+data/*.mv.db
+data/*.lock.db
+data/*.trace.db
