@@ -7,4 +7,5 @@ import com.example.demo.entities.Answer;
 
 public interface AnswerRepository extends JpaRepository<Answer, Long> {
     List<Answer> findByQuestionId(Long questionId);
+    
 }
