@@ -69,7 +69,9 @@ public class QuizController {
         return "redirect:/quizzes";
     }
 
-    @PostMapping("/quizzes/delete/{id}")
+    @PostMapping("/quizzes/delete/{id}")            
+    // delete funcion
+
     public String deleteQuiz(@PathVariable Long id) {
         try {
             quizService.deleteQuiz(id);
