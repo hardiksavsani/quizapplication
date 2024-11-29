@@ -21,7 +21,7 @@ public class QuizService {
     private QuizRepository quizRepository;
 
     @Autowired
-    private QuestionRepository questionRepository;
+    private QuestionRepository questionRepository; 
 
     public Quiz createQuiz(Quiz quiz) {
         if (quiz.getTitle() == null || quiz.getTitle().isEmpty()) {
@@ -37,7 +37,8 @@ public class QuizService {
 
         Quiz savedQuiz = quizRepository.save(quiz);
         savedQuiz.setQuestionCount(savedQuiz.getQuestions().size()); // Set question count after saving
-        return savedQuiz;
+        return savedQuiz;          // Save the quiz and return it
+
     }
 
     public List<Quiz> getAllQuizzes() {
