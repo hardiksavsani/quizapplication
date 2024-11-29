@@ -1,12 +1,5 @@
 package com.example.demo.controllers;
 
-import com.example.demo.entities.Category;
-import com.example.demo.entities.Quiz;
-import com.example.demo.services.CategoryService;
-import com.example.demo.services.QuizService;
-
-import jakarta.validation.Valid;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -19,6 +12,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.example.demo.entities.Category;
+import com.example.demo.entities.Quiz;
+import com.example.demo.services.CategoryService;
+import com.example.demo.services.QuizService;
+
+import jakarta.validation.Valid;
 
 @Controller
 public class QuizController {
@@ -35,7 +35,7 @@ public class QuizController {
 
         model.addAttribute("quiz", new Quiz());
         model.addAttribute("categories", categories);
-        return "add-quiz";
+        return "add-quiz"; // Redirect to the form or another page after submission
     }
 
     @PostMapping("/quizzes")
